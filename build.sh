@@ -23,7 +23,7 @@ for target in $@; do
     TARGET_LIST=$TARGET_ALL
     break
   fi
-  if [ -f "Dockerfile.$target" ]; then
+  if [ -L "link_$target" ]; then
     TARGET_LIST="$TARGET_LIST $target"
   else
     echo "[WARNING] skipping invalid target $target ..."
@@ -34,8 +34,10 @@ VERSION=$(cat VERSION)
 
 for target in $TARGET_LIST; do
   REPO_AND_VERSION="sys42/docker-$target:$VERSION"
-  DOCKERFILE="Dockerfile.$target"
-  echo "building [$REPO_AND_VERSION] with [$DOCKERFILE]..."
-  docker build -t $REPO_AND_VERSION -f $DOCKERFILE .
+
+  cd -P "link_$target"
+  echo "building [$REPO_AND_VERSION] at [$(pwd)]..."
+  docker build -t $REPO_AND_VERSION  .
+  cd -
 done
 
