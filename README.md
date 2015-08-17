@@ -1,12 +1,26 @@
 # docker-ruby
 
-[![](https://badge.imagelayers.io/sys42/docker-ruby22:latest.svg)](https://imagelayers.io/?images=sys42/docker-ruby22:latest 'Get your own badge on imagelayers.io')
-[![](https://badge.imagelayers.io/sys42/docker-ruby21:latest.svg)](https://imagelayers.io/?images=sys42/docker-ruby21:latest 'Get your own badge on imagelayers.io')
-[![](https://badge.imagelayers.io/sys42/docker-ruby20:latest.svg)](https://imagelayers.io/?images=sys42/docker-ruby20:latest 'Get your own badge on imagelayers.io')
-[![](https://badge.imagelayers.io/sys42/docker-ruby191:latest.svg)](https://imagelayers.io/?images=sys42/docker-ruby191:latest 'Get your own badge on imagelayers.io')
-[![](https://badge.imagelayers.io/sys42/docker-rubymulti:latest.svg)](https://imagelayers.io/?images=sys42/docker-rubymulti:latest 'Get your own badge on imagelayers.io')
-
 __Different Ruby versions installed in Docker Containers.__
+
+-----
+
+  * __sys42/docker-ruby22__:
+  
+  [![](https://badge.imagelayers.io/sys42/docker-ruby22:latest.svg)](https://imagelayers.io/?images=sys42/docker-ruby22:latest 'Get your own badge on imagelayers.io')
+  * __sys42/docker-ruby21:__
+  
+  [![](https://badge.imagelayers.io/sys42/docker-ruby21:latest.svg)](https://imagelayers.io/?images=sys42/docker-ruby21:latest 'Get your own badge on imagelayers.io')
+  * __sys42/docker-ruby20:__
+  
+  [![](https://badge.imagelayers.io/sys42/docker-ruby20:latest.svg)](https://imagelayers.io/?images=sys42/docker-ruby20:latest 'Get your own badge on imagelayers.io')
+  * __sys42/docker-ruby191:__
+  
+  [![](https://badge.imagelayers.io/sys42/docker-ruby191:latest.svg)](https://imagelayers.io/?images=sys42/docker-ruby191:latest 'Get your own badge on imagelayers.io')
+  * __sys42/docker-rubymulti:__
+  
+  [![](https://badge.imagelayers.io/sys42/docker-rubymulti:latest.svg)](https://imagelayers.io/?images=sys42/docker-rubymulti:latest 'Get your own badge on imagelayers.io')
+
+--------
 
 Since many Ruby Gems require native compilation this image is based on [sys42/docker-build-essentials](https://github.com/sys42/docker-build-essentials).
 
