@@ -18,7 +18,7 @@ This repository is used to build the following images:
   * __sys42/docker-ruby191__ (Ruby 1.9.1 embedded)
   * __sys42/docker-rubymulti__ (Ruby 1.9.1, 2.0, 2.1 and 2.2 embedded)
    
-  If you need any special combination of the above versions in a single container then copy Dockerfile.rubymulti and adapt it to your needs.
+If you need any special combination of the above versions in a single container then copy Dockerfile.rubymulti and adapt it to your needs.
 
 For generic usage informations please examine [the README file of the base image](https://github.com/sys42/docker-base).
 
