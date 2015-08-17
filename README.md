@@ -20,6 +20,31 @@ This repository is used to build the following images:
    
 If you need any special combination of the above versions in a single container then copy Dockerfile.rubymulti and adapt it to your needs.
 
+**Why is the directory structure of this repository so strange?**
+
+First of all: automated builds on the Docker Hub require the Dockerfile to be named `Dockerfile`. If you want to setup multiple builds from a single github repository you need subfolders for the different builds.
+
+Well, that's not so bad, you think. Me, too. But then comes Docker. When you want to include files in a build with the ADD command in a Dockerfile, these files must be in the same directory or below it. You cannot use relative paths like `../adir` and links won't be followed, too. So the only way around both problems is a (really ugly) deeply nested directory structure.
+
+For this repository the directory structure looks like this:
+
+```
+ruby22/Dockerfile
+     |
+     |-- ruby21/Dockerfile
+              |
+              |-- ruby20/Dockerfile
+                       |
+                       |-- ruby191/Dockerfile
+                                 |
+                                 |-- rubymulti/Dockerfile
+                                             |
+                                             |--- install-data/   <--- shared files here
+```
+
+What a nasty mess ...
+
+
 For generic usage informations please examine [the README file of the base image](https://github.com/sys42/docker-base).
 
 ----
