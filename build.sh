@@ -37,7 +37,7 @@ for target in $TARGET_LIST; do
 
   cd -P "link_$target"
   echo "building [$REPO_AND_VERSION] at [$(pwd)]..."
-  docker build -t $REPO_AND_VERSION  .
+  docker build --rm -t $REPO_AND_VERSION  .
   cd -
 done
 
